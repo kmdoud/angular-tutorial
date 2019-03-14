@@ -12,9 +12,12 @@ export class MenuComponent implements OnInit {
   firstname:string = "Kenneth";
   lastname:string = "Doud";
 
+  name: string = this.firstname;
+
+
   namebutton(): void
   {
-    
+    this.name =  (this.name == this.firstname) ? this.lastname : this.firstname;
   }
 
   ngOnInit() {
